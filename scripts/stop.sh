@@ -1,4 +1,4 @@
 #!/bin/bash
-nomeApp="<NOME-APP>"
+nomeApp="giloApp"
 
 sudo supervisorctl stop $nomeApp
