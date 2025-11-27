@@ -4,8 +4,6 @@ set -e
 NOME_APP="giloApp"
 APP_DIR="/home/ubuntu/giloAppv2"
 
-export NODE_OPTIONS=--openssl-legacy-provider
-
 cd $APP_DIR
 
 npm install
