@@ -1,8 +1,16 @@
 #!/bin/bash
-nomeApp="giloApp"
+set -e
+
+NOME_APP="giloApp"
+APP_DIR="/home/ubuntu/giloAppv2"
+
 export NODE_OPTIONS=--openssl-legacy-provider
-cd /home/ubuntu/giloAppv2
+
+cd $APP_DIR
+
 npm install
-sudo supervisorctl reread
-sudo supervisorctl update
-sudo supervisorctl start $nomeApp
+
+# Atualiza configurações do Supervisor
+supervisorctl reread
+supervisorctl update
+supervisorctl restart $NOME_APP
